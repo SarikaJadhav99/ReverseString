@@ -6,20 +6,22 @@ namespace ReverseString
     {
         static void Main(string[] args)
         {
-            //Enter the string
-            Console.WriteLine("Welcome to CSharp corner");
-            
-            string[] str = "Welcome to CSharp corner".Split(' ');
-            string ans = "";
+         Console.WriteLine("Enter the Statement:");
 
-            for(int i = str.Length-1; i>=0 ; i--)
-            {
-                ans += str[i] + " ";
-            }
-            
-            Console.WriteLine("Reveresed string is :");
-            Console.Write(ans.Substring(0, ans.Length - 1));
-            Console.ReadLine();
+         string statement = Console.ReadLine();
+         string[] str = statement.Split(' ');
+         int i = str.Length - 1;
+
+         Console.WriteLine("Reversed statement is:");
+
+         foreach (var element in str)
+                while(i>=0)
+                {
+                    Console.Write($"{str[i]}{' '}");
+                    i--;
+                }
+
+         Console.ReadLine();
         }
     }
 }
